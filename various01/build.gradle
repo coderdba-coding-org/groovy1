@@ -1,0 +1,30 @@
+buildscript {
+  ext {
+    cthulhuVersion = '3.1.0'
+  }
+  repositories {
+    jcenter()
+    mavenCentral()
+  }
+}
+
+version = "0.0.1"
+
+distTar.version = ""
+
+dependencies {
+}
+
+test {
+  testLogging {
+    exceptionFormat = 'FULL'
+  }
+}
+
+configurations.all {
+  resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+wrapper {
+  gradleVersion = '5.0'
+}
